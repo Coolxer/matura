@@ -14,6 +14,7 @@
 				mysql_query("SET NAMES 'utf8' COLLATE 'utf8_polish_ci'");
 				$wynik = mysql_query("select * from epoki");
 				
+				/*
 				echo "<table border='1'>";
 				
 				while($tab = mysql_fetch_array($wynik))
@@ -24,6 +25,13 @@
 				}
 				
 				echo "</table>";
+				*/
+				
+				while($row = mysql_fetch_array($wynik))
+				{
+					echo $row['nazwa']."<br>";
+				}
+				
 			}
 			mysql_close($id);
 		}

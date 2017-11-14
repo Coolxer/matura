@@ -1,6 +1,11 @@
+.row-mar-5 { margin-top:5px; }
+.row-mar-10{ margin-top:10px; }
+.row-mar-15{ margin-top:15px; }
+.row-mar-30{ margin-top:30px; }
+
 body
 {
-	background-color:#333333;
+	background-color:#262626;
 	margin:0;
 	
 	padding-top: 70px; 
@@ -9,4 +14,38 @@ body
 #con
 {
 	//background-color:red;
+}
+
+.jumbotron 
+{
+	background-color:#333333;
+	color:#ffffff;
+	outline:#007bff 2px solid;
+	
+	text-align:center;
+}
+
+.myLabel
+{
+	color:#ffffff;
+	font-size:1.4rem;
+	text-align:center;
+}
+
+#all_select
+{
+	margin:0 auto;
+}
+
+.btn-outline-primary:focus, .btn-outline-primary.focus {
+    background: #007bff;
+	color:#ffffff;
+    box-shadow: none;
+}
+
+#ajax
+{
+	margin:0 auto;
+	margin-top:30px;
+	color:#ffffff;
 }

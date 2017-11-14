@@ -9,14 +9,21 @@
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 		
 		<link rel="stylesheet" href="style.css" type="text/css">
+		
 	</head>
 	<body>
 	
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script
+		 src="https://code.jquery.com/jquery-3.2.1.min.js"
+		 integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		 crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+		
+		<script type="text/javascript" src="script.js"></script>
+		<script type="text/javascript" src="script2.js"></script>
 		
 		<div class="container">
 			<section id="menu">
@@ -48,11 +55,14 @@
 					</nav>
 				</div>
 			</section>
+			
 			<section id="content">
 				<div class="jumbotron d-none d-sm-none d-md-block d-lg-block d-xl-block ">
-					<h1 class="display-3 align-middle">Witajcie maturzyści!</h1>
+					<h1 class="display-3 align-middle">Witajcie <span style="color:red;">maturzyści!</span></h1>
 					<p class="lead">
-						Specjalnie dla was przygotowałem największą bazę powtórek z dzieł literackich wymaganych na maturze w Polsce.
+						<span style="color:#007bff;">
+							Specjalnie dla was przygotowałem największą bazę powtórek z dzieł literackich wymaganych na maturze w Polsce.
+						</span>
 					</p>
 					<hr class="my-4">
 					<p>
@@ -60,33 +70,39 @@
 						To ty decydujesz, które informacje chcesz wyświetlić oraz które aspekty są dla ciebie ważne.
 					</p>
 					<a class="btn btn-primary btn-lg btn-block" href="#" role="button">Start</a>
-					</p>
 				</div>
 			
-				
-				<form method="post">
-					<div class="row">
-						<!--
-						<div class="col-xl-2 offset-xl-5 ">
-							<input type="text" name="n1" class="form-control"  placeholder="placeholder"  >
-						</div>
-						-->
+				<div class="row">
+					<div class="col-xl-12 myLabel">
+						<p>Wybierz tabelę, którą chcesz zobaczyć:</p>
 					</div>
-					<div class="row">
-						<div style="margin:0 auto">
-							<div class="btn-group" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-secondary">Epoki</button>
-								<button type="button" class="btn btn-secondary">Autorzy</button>
-								<button type="button" class="btn btn-secondary">Motywy</button>
-								<button type="button" class="btn btn-secondary">Filozofie i kierunki</button>
-								<button type="button" class="btn btn-secondary">Dzieła</button>
+				</div>
+				<div class="row">
+					<div id="all_select">
+						<div class="d-none d-sm-none d-md-block d-lg-block d-xl-block col-xl-12 col-12 col-sm-12 col-md-12">
+							<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
+								<button type="button" class="btn btn-outline-primary aut">Autorzy</button>
+								<button type="button" class="btn btn-outline-primary era">Epoki</button>
+								<button type="button" class="btn btn-outline-primary lit">Dzieła</button>
+								<button type="button" class="btn btn-outline-primary phi">Filozofie i kierunki</button>
+								<button type="button" class="btn btn-outline-primary mot">Motywy</button>
+							</div>
+						</div>
+						<div class="d-block d-sm-block d-md-none d-lg-none d-xl-none">
+							<div class="btn-group btn-group-lg btn-group-vertical" role="group" aria-label="Basic example">
+								<button type="button" class="btn btn-outline-primary aut">Autorzy</button>
+								<button type="button" class="btn btn-outline-primary era">Epoki</button>
+								<button type="button" class="btn btn-outline-primary lit">Dzieła</button>
+								<button type="button" class="btn btn-outline-primary phi">Filozofie i kierunki</button>
+								<button type="button" class="btn btn-outline-primary mot">Motywy</button>
 							</div>
 						</div>
 					</div>
-					
-				</form>
+				</div>
+				<div class="row">
+					<div id="ajax"></div>
+				</div>
 			</section>
 		</div>
-	
 	</body>
 </html>
