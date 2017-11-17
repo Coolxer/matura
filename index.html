@@ -23,7 +23,6 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 		
 		<script type="text/javascript" src="script.js"></script>
-		<script type="text/javascript" src="script2.js"></script>
 		
 		<div class="container">
 			<section id="menu">
@@ -57,7 +56,8 @@
 			</section>
 			
 			<section id="content">
-				<div class="jumbotron d-none d-sm-none d-md-block d-lg-block d-xl-block ">
+			  <!--<div class="jumbotron d-none d-sm-none d-md-block d-lg-block d-xl-block ">-->
+					<div class="jumbotron d-none d-sm-none d-md-none d-lg-none d-xl-none ">
 					<h1 class="display-3 align-middle">Witajcie <span style="color:red;">maturzyści!</span></h1>
 					<p class="lead">
 						<span style="color:#007bff;">
@@ -71,33 +71,73 @@
 					</p>
 					<a class="btn btn-primary btn-lg btn-block" href="#" role="button">Start</a>
 				</div>
-			
 				<div class="row">
 					<div class="col-xl-12 myLabel">
 						<p>Wybierz tabelę, którą chcesz zobaczyć:</p>
 					</div>
 				</div>
 				<div class="row">
-					<div id="all_select">
+					<div id="tables">
 						<div class="d-none d-sm-none d-md-block d-lg-block d-xl-block col-xl-12 col-12 col-sm-12 col-md-12">
-							<div class="btn-group btn-group-lg" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-outline-primary aut">Autorzy</button>
-								<button type="button" class="btn btn-outline-primary era">Epoki</button>
-								<button type="button" class="btn btn-outline-primary lit">Dzieła</button>
-								<button type="button" class="btn btn-outline-primary phi">Filozofie i kierunki</button>
-								<button type="button" class="btn btn-outline-primary mot">Motywy</button>
+							<div class="btn-group btn-group-lg" data-toggle="buttons">
+								<label class="btn btn-outline-primary" data-table="autorzy">
+									<input type="radio">Autorzy
+								</label>
+								<label class="btn btn-outline-primary" data-table="epoki">
+									<input type="radio">Epoki
+								</label>
+								<label class="btn btn-outline-primary" data-table="dziela">
+									<input type="radio">Dzieła
+								</label>
+								<label class="btn btn-outline-primary" data-table="filozofie_i_kierunki">
+									<input type="radio">Filozofie i kierunki
+								</label>
+								<label class="btn btn-outline-primary" data-table="motywy">
+									<input type="radio">Motywy
+								</label>
 							</div>
 						</div>
-						<div class="d-block d-sm-block d-md-none d-lg-none d-xl-none">
-							<div class="btn-group btn-group-lg btn-group-vertical" role="group" aria-label="Basic example">
-								<button type="button" class="btn btn-outline-primary aut">Autorzy</button>
-								<button type="button" class="btn btn-outline-primary era">Epoki</button>
-								<button type="button" class="btn btn-outline-primary lit">Dzieła</button>
-								<button type="button" class="btn btn-outline-primary phi">Filozofie i kierunki</button>
-								<button type="button" class="btn btn-outline-primary mot">Motywy</button>
+						<div class="d-block d-sm-block d-md-none d-lg-none d-xl-none" >
+							<div class="btn-group btn-group-lg btn-group-vertical" data-toggle="buttons" >
+								<label class="btn btn-outline-primary bLabel" data-table="autorzy">
+									<input type="radio">Autorzy
+								</label>
+								<label class="btn btn-outline-primary" data-table="epoki">
+									<input type="radio">Epoki
+								</label>
+								<label class="btn btn-outline-primary" data-table="dziela">
+									<input type="radio">Dzieła
+								</label>
+								<label class="btn btn-outline-primary" data-table="filozofie_i_kierunki">
+									<input type="radio">Filozofie i kierunki
+								</label>
+								<label class="btn btn-outline-primary" data-table="motywy">
+									<input type="radio">Motywy
+								</label>
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="row">
+						<button type="button" class="btn btn-primary btn-lg">Określ</button>
+				</div>
+				<div class="row">
+					<form method="POST">
+						<div class="form-group">
+							<div id="myForm">
+							<!--
+							<label for="exampleFormControlSelect1">Example select</label>
+							<select class="form-control" id="exampleFormControlSelect1">
+							<option>1</option>
+							<option>2</option>
+							<option>3</option>
+							<option>4</option>
+							<option>5</option>
+							</select>
+							-->
+							</div>
+						 </div>
+					</form>
 				</div>
 				<div class="row">
 					<div id="ajax"></div>

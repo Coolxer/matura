@@ -11,11 +11,6 @@ body
 	padding-top: 70px; 
 }
 
-#con
-{
-	//background-color:red;
-}
-
 .jumbotron 
 {
 	background-color:#333333;
@@ -32,7 +27,7 @@ body
 	text-align:center;
 }
 
-#all_select
+#tables
 {
 	margin:0 auto;
 }
